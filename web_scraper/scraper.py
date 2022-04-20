@@ -39,20 +39,22 @@ This function will return a formatted string of each uncited passage in the righ
 """
 def get_citations_needed_report(url):
     data = fixed(url)
+    arr = [i for i in data]
 
-    # array = []
-    for i in data:
-        print(f"citation is needed for: '{i}' passage")
-        print("_"*50)
+    # for i in data:
+    #     print(f"citation is needed for: '{i}' passage")
+    #     print("_"*50)
+    return arr
 
  
 
     # with open("uncited_passages.json", "w") as f:
-    #     content = json.dumps(array)
+    #     content = json.dumps(data)
     #     f.write(content)
     
 
 
 if __name__ == "__main__":
+
     print(get_citations_needed_count(url))
-    get_citations_needed_report(url)
+    print(get_citations_needed_report(url))
